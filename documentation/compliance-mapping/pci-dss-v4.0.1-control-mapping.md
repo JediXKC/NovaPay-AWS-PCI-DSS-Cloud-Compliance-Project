@@ -1,4 +1,5 @@
-# NovaPay PCI DSS v4.0.1 Control Mapping
+
+
 
 ## Purpose
 
@@ -64,3 +65,64 @@ NovaPay will retain the following evidence:
 **Control Owner:** Cloud Security / Compliance
 
 **Review Frequency:** At least every six months and following significant network changes.
+---
+
+## PCI DSS Requirement 2 — Apply Secure Configurations to All System Components
+
+### Control Objective
+
+NovaPay must establish and maintain secure configuration standards for all AWS resources and system components within the Cardholder Data Environment (CDE).
+
+Default configurations, unnecessary services, excessive permissions, and insecure settings must be identified and remediated.
+
+### AWS Services and Controls
+
+- AWS Config
+- AWS Systems Manager
+- AWS IAM
+- AWS Security Hub
+- Amazon EC2
+- Amazon S3
+- AWS Organizations Service Control Policies (SCPs)
+- Infrastructure as Code (Terraform)
+
+### NovaPay Implementation
+
+NovaPay will establish documented secure configuration standards for AWS resources supporting the Cardholder Data Environment.
+
+AWS Config will monitor resource configurations and identify deviations from approved security requirements.
+
+AWS Security Hub will be used to evaluate the AWS environment against applicable security best practices and identify configuration weaknesses.
+
+IAM policies and roles will be reviewed to reduce excessive permissions and enforce least-privilege access.
+
+Amazon EC2 instances will use approved configurations and unnecessary services, ports, and software will be restricted.
+
+Amazon S3 Block Public Access will be enabled for compliance evidence and logging buckets unless a documented business requirement and security review authorizes an exception.
+
+Terraform will be used to define standardized infrastructure configurations and reduce manual configuration inconsistencies.
+
+Configuration exceptions must be documented, reviewed, approved, and retained as compliance evidence.
+
+### Compliance Evidence
+
+NovaPay will retain the following evidence:
+
+- Secure configuration standards.
+- AWS Config rule configurations.
+- AWS Config compliance reports.
+- AWS Security Hub findings.
+- IAM policy review documentation.
+- EC2 configuration documentation.
+- S3 Block Public Access configuration screenshots.
+- Terraform configuration files.
+- Configuration exception records.
+- Remediation tracking documentation.
+
+### Control Status
+
+**Status:** Planned
+
+**Control Owner:** Cloud Security / Compliance
+
+**Review Frequency:** At least every six months and following significant system or configuration changes.
