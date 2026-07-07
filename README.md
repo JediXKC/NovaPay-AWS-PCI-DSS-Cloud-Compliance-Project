@@ -41,8 +41,12 @@ incident-response/
 monitoring/
 policies/
 terraform/
-Current Status
+```
 
-Disclaimer
+## Current Status
+
+Planning and documentation phase. AWS deployment is paused until billing/account access is resolved.
+
+## Disclaimer
 
 This is a portfolio project using a fictional company. It is not affiliated with AWS, PCI SSC, or any real payment processor.
